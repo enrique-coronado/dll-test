@@ -7,6 +7,7 @@ const express_1 = __importDefault(require("express"));
 const validation_util_1 = require("../utils/validation.util");
 const pagination_util_1 = require("../utils/pagination.util");
 const user_service_1 = require("../services/user.service");
+const logger_1 = __importDefault(require("../config/logger"));
 const router = express_1.default.Router();
 /**
  * @swagger
@@ -51,10 +52,16 @@ const router = express_1.default.Router();
  *               $ref: '#/components/schemas/PaginatedResponse'
  */
 router.get('/', (req, res) => {
-    console.log(`GET /users - Query params: sort=${req.query.sort}, size=${req.query.size}, page=${req.query.page}`);
+    logger_1.default.info('GET /users', {
+        query: req.query,
+        ip: req.ip
+    });
     const validation = (0, validation_util_1.validatePaginationParams)(req.query);
     if (!validation.isValid) {
-        console.log(validation.error);
+        logger_1.default.warn('Invalid pagination parameters', {
+            error: validation.error,
+            query: req.query
+        });
         return res.status(400).json({
             data: [],
             paging: { totalResults: 0 }
@@ -63,7 +70,12 @@ router.get('/', (req, res) => {
     const result = user_service_1.userService.getPaginatedUsers(validation.options);
     const baseUrl = `${req.protocol}://${req.get('host')}${req.baseUrl}`;
     const links = (0, pagination_util_1.buildPaginationLinks)(baseUrl, result, validation.options);
-    console.log(`Returning ${result.data.length} users out of ${result.totalResults} total`);
+    logger_1.default.info('Users retrieved successfully', {
+        returned: result.data.length,
+        total: result.totalResults,
+        page: validation.options.page,
+        size: validation.options.size
+    });
     res.json({
         data: result.data,
         paging: Object.assign({ totalResults: result.totalResults }, links)
