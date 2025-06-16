@@ -7,6 +7,12 @@ import { userService } from '../services/user.service';
 import logger from '../config/logger';
 
 export class UserController {
+  /**
+   * Retrieves a paginated list of users with optional sorting
+   * @param req - Express request object containing pagination query parameters
+   * @param res - Express response object for sending the paginated user data
+   * @returns Promise that resolves when response is sent
+   */
   async getUsers(req: Request<{}, {}, {}, PaginationQuery>, res: Response<PaginatedResponse<User>>) {
     logger.info('GET /users', { 
       query: req.query,

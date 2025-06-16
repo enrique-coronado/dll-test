@@ -37,3 +37,30 @@
 {"level":"info","message":"Users retrieved successfully","page":1,"returned":5,"size":10,"timestamp":"2025-06-16T23:13:39.685Z","total":5}
 {"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{"size":"0"},"timestamp":"2025-06-16T23:13:39.688Z"}
 {"error":"Invalid page size: 0","level":"warn","message":"Invalid pagination parameters","query":{"size":"0"},"timestamp":"2025-06-16T23:13:39.688Z"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{},"timestamp":"2025-06-16T23:41:40.376Z"}
+{"level":"info","message":"Users retrieved successfully","page":1,"returned":5,"size":10,"timestamp":"2025-06-16T23:41:40.384Z","total":5}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{"page":"1","size":"2"},"timestamp":"2025-06-16T23:41:40.391Z"}
+{"level":"info","message":"Users retrieved successfully","page":1,"returned":2,"size":2,"timestamp":"2025-06-16T23:41:40.392Z","total":5}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{"sort":"name:asc"},"timestamp":"2025-06-16T23:41:40.394Z"}
+{"level":"info","message":"Users retrieved successfully","page":1,"returned":5,"size":10,"timestamp":"2025-06-16T23:41:40.395Z","total":5}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{"size":"0"},"timestamp":"2025-06-16T23:41:40.397Z"}
+{"error":"Invalid page size: 0","level":"warn","message":"Invalid pagination parameters","query":{"size":"0"},"timestamp":"2025-06-16T23:41:40.398Z"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{"page":"0"},"timestamp":"2025-06-16T23:41:40.400Z"}
+{"error":"Invalid page number: 0","level":"warn","message":"Invalid pagination parameters","query":{"page":"0"},"timestamp":"2025-06-16T23:41:40.400Z"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{"size":"100"},"timestamp":"2025-06-16T23:41:40.402Z"}
+{"level":"info","message":"Users retrieved successfully","page":1,"returned":5,"size":100,"timestamp":"2025-06-16T23:41:40.403Z","total":5}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{"size":"101"},"timestamp":"2025-06-16T23:41:40.407Z"}
+{"error":"Invalid page size: 101","level":"warn","message":"Invalid pagination parameters","query":{"size":"101"},"timestamp":"2025-06-16T23:41:40.407Z"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{"sort":"name:desc"},"timestamp":"2025-06-16T23:41:40.409Z"}
+{"level":"info","message":"Users retrieved successfully","page":1,"returned":5,"size":10,"timestamp":"2025-06-16T23:41:40.410Z","total":5}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{"page":"999","size":"10"},"timestamp":"2025-06-16T23:41:40.412Z"}
+{"level":"info","message":"Users retrieved successfully","page":999,"returned":0,"size":10,"timestamp":"2025-06-16T23:41:40.412Z","total":5}
+{"environment":"development","host":"127.0.0.1","level":"info","message":"Server started successfully","port":"3001","timestamp":"2025-06-16T23:44:03.934Z"}
+{"ip":"127.0.0.1","level":"info","message":"GET /users","query":{"page":"1","size":"3","sort":"name:desc"},"timestamp":"2025-06-16T23:44:06.551Z"}
+{"level":"info","message":"Users retrieved successfully","page":1,"returned":3,"size":3,"timestamp":"2025-06-16T23:44:06.554Z","total":5}
+{"ip":"127.0.0.1","level":"info","message":"GET /users","query":{"page":"-1","size":"3","sort":"name:desc"},"timestamp":"2025-06-16T23:44:08.879Z"}
+{"error":"Invalid page number: -1","level":"warn","message":"Invalid pagination parameters","query":{"page":"-1","size":"3","sort":"name:desc"},"timestamp":"2025-06-16T23:44:08.880Z"}
+{"ip":"127.0.0.1","level":"info","message":"GET /users","query":{"page":"1","size":"3","sort":"name:desc"},"timestamp":"2025-06-16T23:44:22.188Z"}
+{"level":"info","message":"Users retrieved successfully","page":1,"returned":3,"size":3,"timestamp":"2025-06-16T23:44:22.191Z","total":5}
+{"ip":"127.0.0.1","level":"info","message":"GET /users","query":{"page":"1000","size":"3","sort":"name:desc"},"timestamp":"2025-06-16T23:44:23.660Z"}
+{"level":"info","message":"Users retrieved successfully","page":1000,"returned":0,"size":3,"timestamp":"2025-06-16T23:44:23.661Z","total":5}
