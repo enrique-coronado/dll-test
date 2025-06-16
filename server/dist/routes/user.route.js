@@ -4,10 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const validation_util_1 = require("../utils/validation.util");
-const pagination_util_1 = require("../utils/pagination.util");
-const user_service_1 = require("../services/user.service");
-const logger_1 = __importDefault(require("../config/logger"));
+const user_controller_1 = require("../controllers/user.controller");
 const router = express_1.default.Router();
 /**
  * @swagger
@@ -51,35 +48,6 @@ const router = express_1.default.Router();
  *             schema:
  *               $ref: '#/components/schemas/PaginatedResponse'
  */
-router.get('/', (req, res) => {
-    logger_1.default.info('GET /users', {
-        query: req.query,
-        ip: req.ip
-    });
-    const validation = (0, validation_util_1.validatePaginationParams)(req.query);
-    if (!validation.isValid) {
-        logger_1.default.warn('Invalid pagination parameters', {
-            error: validation.error,
-            query: req.query
-        });
-        return res.status(400).json({
-            data: [],
-            paging: { totalResults: 0 }
-        });
-    }
-    const result = user_service_1.userService.getPaginatedUsers(validation.options);
-    const baseUrl = `${req.protocol}://${req.get('host')}${req.baseUrl}`;
-    const links = (0, pagination_util_1.buildPaginationLinks)(baseUrl, result, validation.options);
-    logger_1.default.info('Users retrieved successfully', {
-        returned: result.data.length,
-        total: result.totalResults,
-        page: validation.options.page,
-        size: validation.options.size
-    });
-    res.json({
-        data: result.data,
-        paging: Object.assign({ totalResults: result.totalResults }, links)
-    });
-});
+router.get('/', user_controller_1.userController.getUsers.bind(user_controller_1.userController));
 exports.default = router;
 //# sourceMappingURL=user.route.js.map
