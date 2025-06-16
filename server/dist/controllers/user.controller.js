@@ -9,6 +9,12 @@ const pagination_util_1 = require("../utils/pagination.util");
 const user_service_1 = require("../services/user.service");
 const logger_1 = __importDefault(require("../config/logger"));
 class UserController {
+    /**
+     * Retrieves a paginated list of users with optional sorting
+     * @param req - Express request object containing pagination query parameters
+     * @param res - Express response object for sending the paginated user data
+     * @returns Promise that resolves when response is sent
+     */
     async getUsers(req, res) {
         logger_1.default.info('GET /users', {
             query: req.query,
