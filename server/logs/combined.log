@@ -18,3 +18,22 @@
 {"error":"Invalid page number: a","level":"warn","message":"Invalid pagination parameters","query":{"page":"a","size":"3","sort":"name:asc"},"timestamp":"2025-06-16T20:25:36.703Z"}
 {"ip":"127.0.0.1","level":"info","message":"GET /users","query":{"page":"1","size":"3","sort":"name:asc"},"timestamp":"2025-06-16T20:25:47.266Z"}
 {"level":"info","message":"Users retrieved successfully","page":1,"returned":3,"size":3,"timestamp":"2025-06-16T20:25:47.269Z","total":5}
+{"environment":"development","host":"127.0.0.1","level":"info","message":"Server started successfully","port":"3001","timestamp":"2025-06-16T23:02:30.361Z"}
+{"environment":"development","host":"127.0.0.1","level":"info","message":"Server started successfully","port":"3001","timestamp":"2025-06-16T23:06:37.566Z"}
+{"environment":"development","host":"127.0.0.1","level":"info","message":"Server started successfully","port":"3001","timestamp":"2025-06-16T23:07:00.956Z"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{},"timestamp":"2025-06-16T23:07:35.718Z"}
+{"level":"info","message":"Users retrieved successfully","page":1,"returned":5,"size":10,"timestamp":"2025-06-16T23:07:35.723Z","total":5}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{"page":"1","size":"2"},"timestamp":"2025-06-16T23:07:35.729Z"}
+{"level":"info","message":"Users retrieved successfully","page":1,"returned":2,"size":2,"timestamp":"2025-06-16T23:07:35.730Z","total":5}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{"sort":"name:asc"},"timestamp":"2025-06-16T23:07:35.732Z"}
+{"level":"info","message":"Users retrieved successfully","page":1,"returned":5,"size":10,"timestamp":"2025-06-16T23:07:35.733Z","total":5}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{"size":"0"},"timestamp":"2025-06-16T23:07:35.735Z"}
+{"error":"Invalid page size: 0","level":"warn","message":"Invalid pagination parameters","query":{"size":"0"},"timestamp":"2025-06-16T23:07:35.736Z"}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{},"timestamp":"2025-06-16T23:13:39.670Z"}
+{"level":"info","message":"Users retrieved successfully","page":1,"returned":5,"size":10,"timestamp":"2025-06-16T23:13:39.675Z","total":5}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{"page":"1","size":"2"},"timestamp":"2025-06-16T23:13:39.682Z"}
+{"level":"info","message":"Users retrieved successfully","page":1,"returned":2,"size":2,"timestamp":"2025-06-16T23:13:39.682Z","total":5}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{"sort":"name:asc"},"timestamp":"2025-06-16T23:13:39.685Z"}
+{"level":"info","message":"Users retrieved successfully","page":1,"returned":5,"size":10,"timestamp":"2025-06-16T23:13:39.685Z","total":5}
+{"ip":"::ffff:127.0.0.1","level":"info","message":"GET /users","query":{"size":"0"},"timestamp":"2025-06-16T23:13:39.688Z"}
+{"error":"Invalid page size: 0","level":"warn","message":"Invalid pagination parameters","query":{"size":"0"},"timestamp":"2025-06-16T23:13:39.688Z"}
